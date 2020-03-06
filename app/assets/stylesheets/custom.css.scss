@@ -35,3 +35,41 @@
   margin-right: 15px;
   font-size: 1.2em;
 }
+
+.form-contents {
+  list-style-type: none ;
+}
+
+.form-all .twitter {
+  color: #00acee;
+  font-size: 2.5em;
+  margin-top: 20px;
+}
+
+.form-contents {
+  margin-top: 30px;
+}
+
+.form-contents li {
+  margin-top: 25px;
+}
+
+.form-input {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: thin solid #000;
+  background-color: #EFF5FB;
+  width: 450px;
+  height: 45px;
+  border-radius: 5px 5px 3px 3px;
+}
+
+.form-submit {
+  width: 450px;
+  height: 45px;
+  border-radius: 20px;
+  background-color: #00acee;
+  color: #fff;
+  font-size: 1.1em;
+}
