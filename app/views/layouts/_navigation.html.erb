@@ -2,16 +2,26 @@
   <li class="component">
     <i class="fa fa-twitter twitter" aria-hidden="true"></i>
   </li>
-  <li class="component" id="home">
-    <i class="fa fa-home icon" aria-hidden="true"></i>
-    Home
-  </li>
-  <li class="component">
-    <i class="fa fa-sign-in icon" aria-hidden="true"></i>
-    Log in
-  </li>
-  <li class="component">
-    <i class="fa fa-user-plus icon" aria-hidden="true"></i>
-    <%= link_to 'Sign up', new_user_path, class: 'text-dark' %>
+  <% if logged_in? %>
+    <li class="component" id="home">
+      <i class="fa fa-home icon" aria-hidden="true"></i>
+      <%= link_to 'Home', tweets_path, class: 'home' %>
     </li>
+    <li class="component">
+      <i class="fa fa-sign-out icon" aria-hidden="true"></i>
+      <%= link_to 'Log out', session_path(current_user), method: :delete, class: 'text-dark' %>
+    </li>
+    <li class="component-tweetbutton">
+      <%= link_to 'Tweet', new_tweet_path, class: 'tweet-button' %>
+    </li>
+  <% else %>
+    <li class="component">
+      <i class="fa fa-sign-in icon" aria-hidden="true"></i>
+      <%= link_to 'Log in', new_session_path, class: 'text-dark' %>
+    </li>
+    <li class="component">
+      <i class="fa fa-user-plus icon" aria-hidden="true"></i>
+      <%= link_to 'Sign up', new_user_path, class: 'text-dark' %>
+    </li>
+  <% end %>
 </ul>

@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-7 index-center">
+    <div class="index-tweet">
+      <div class="index-tweet-home">
+        Home
+      </div>
+      <div class="index-tweet-content">
+        <%= form_with scope: :tweet, url: tweets_path  do |f| %>
+          <ul class="index-tweet-form">
+            <li>
+              <i class="fa fa-twitter twitter" aria-hidden="true"></i>
+              <%= f.text_field :content, class: "index-tweet-content-component", placeholder: "What's happening?" %>
+            </li>
+            <li>
+              <%= f.submit("Tweet", class: "index-tweet-submit") %>
+            </li>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+    <div class="inline">
+    </div>
+    <% @tweets.each do |tweet| %>
+      <div class="tweet-element">
+        <%= tweet.content %>
+      </div>
+    <% end %>
+  </div>
+  <div class="col-5 index-right">
+    <div class="right-sidebar">
+    </div>
+  </div>
+</div>

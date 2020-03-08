@@ -8,10 +8,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:id] = @user.id
-      flash[:success] = "Welcome to Shimogai's Twitter"
-      redirect_to root_path
+      redirect_to tweets_path
     else
-      flash[:danger] = "Enter your information again"
       render 'new'
     end
   end

@@ -1,11 +1,10 @@
-<%= form_with model: @user do |f| %>
+<%= form_with scope: :session, url: sessions_path  do |f| %>
   <div class="form-all" align="center">
     <i class="fa fa-twitter twitter" aria-hidden="true"></i>
     <ul class="form-contents">
       <li><%= f.text_field :username, class: "form-input", placeholder: ' Enter name', autofocus: true %></li>
-      <li><%= f.email_field :email, class: "form-input", placeholder: ' Enter email' %></li>
       <li><%= f.password_field :password, class: "form-input", placeholder: ' Enter password' %></li>
-      <li><%= f.submit("Sign up", class: "form-submit") %></li>
+      <li><%= f.submit("Log in",class: "form-submit") %></li>
     </ul>
   </div>
 <% end %>

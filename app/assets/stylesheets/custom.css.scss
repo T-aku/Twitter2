@@ -1,9 +1,9 @@
 @import 'bootstrap/dist/css/bootstrap';
 @import 'font-awesome';
 
-.sidebar {
+.left-sidebar {
   position: fixed;
-  width: 350px;
+  width: 368px;
   border-right: thin solid #EAE8E8;
   height: 100%;
   padding-left: 80px;
@@ -34,6 +34,10 @@
 .component .icon {
   margin-right: 15px;
   font-size: 1.2em;
+}
+
+.form-all {
+  padding-right: 80px;
 }
 
 .form-contents {
@@ -72,4 +76,125 @@
   background-color: #00acee;
   color: #fff;
   font-size: 1.1em;
+}
+
+.home {
+  color: #00acee;
+}
+
+.component-tweetbutton {
+  margin-top: 30px;
+}
+
+.tweet-button {
+  color: #fff;
+  background-color: #00acee;
+  border-radius: 30px;
+  padding: 13px 70px;
+  font-size: 0.7em;
+}
+
+.tweet-all {
+  padding-right: 100px;
+}
+
+.tweet-form {
+  list-style-type: none ;
+  margin-top: 30px;
+}
+
+.tweet-all .twitter {
+  font-size: 2.5em;
+  margin-top: 30px;
+}
+
+.tweet-content {
+  width: 500px;
+  height: 200px;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+
+.tweet-submit {
+  margin-left: 370px;
+  margin-top: 20px;
+  width: 140px;
+  height: 45px;
+  background-color: #00acee;
+  color: #fff;
+  border-radius: 25px;
+  font-size: 1.1em;
+}
+
+.right-sidebar {
+  position: fixed;
+  width: 400px;
+  border-left: thin solid #EAE8E8;
+  height: 100%;
+  padding-right: 100px;
+  margin-left: 0;
+  box-sizing: border-box;
+}
+
+.index-tweet-home {
+  margin-top: 10px;
+  margin-left: 0;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-bottom: thin solid #EAE8E8;
+  width: 100%;
+}
+
+.index-right {
+  padding-left: 0;
+}
+
+.index-center {
+  padding-right: 0;
+}
+
+.index-tweet-content-component {
+  border: none;
+  width: 530px;
+  height: 50px;
+}
+
+.index-tweet-form {
+  list-style-type: none ;
+  padding-top: 20px;
+  padding-left: 15px;
+}
+
+.index-tweet-form .twitter {
+  font-size: 2em;
+  padding-right: 15px;
+}
+
+.index-tweet-submit {
+  background-color: #00acee;
+  color: #fff;
+  border-radius: 25px;
+  margin-top: 10px;
+  font-size: 1.1em;
+  margin-left: 480px;
+  width: 90px;
+  height: 40px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.index-tweet {
+  border-bottom: thin solid #EAE8E8;
+}
+
+.tweet-element {
+  border-bottom:thin solid #EAE8E8;
+  padding: 20px 20px;
+}
+
+.inline {
+  padding-top: 7px;
+  background-color: #EAE8E8;
 }
