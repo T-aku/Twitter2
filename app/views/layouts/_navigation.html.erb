@@ -8,6 +8,10 @@
       <%= link_to 'Home', tweets_path, class: 'home' %>
     </li>
     <li class="component">
+      <i class="fa fa-user-circle-o icon" aria-hidden="true"></i>
+      <%= link_to 'Profile', user_path(current_user), class: 'text-dark' %>
+    </li>
+    <li class="component">
       <i class="fa fa-sign-out icon" aria-hidden="true"></i>
       <%= link_to 'Log out', session_path(current_user), method: :delete, class: 'text-dark' %>
     </li>

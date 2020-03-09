@@ -1,21 +1,40 @@
 @import 'bootstrap/dist/css/bootstrap';
 @import 'font-awesome';
 
+.rowver1 {
+  width: 100%;
+}
+
+.rowver2 {
+  width: 100%;
+  margin: 0;
+}
+
 .left-sidebar {
   position: fixed;
-  width: 368px;
+  width: 25%;
   border-right: thin solid #EAE8E8;
   height: 100%;
-  padding-left: 80px;
   margin-right: 0;
   box-sizing: border-box;
+}
+
+.application-left {
+  padding-right: 0;
+  padding-left: 0;
+  height: 518px;
+}
+
+.application-center {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .contens {
   list-style-type: none ;
   font-weight: bold;
   font-size: 150%;
-  
+  padding-left: 100px;
 }
 
 .component {
@@ -131,7 +150,7 @@
   width: 400px;
   border-left: thin solid #EAE8E8;
   height: 100%;
-  padding-right: 100px;
+  padding-right: 0px;
   margin-left: 0;
   box-sizing: border-box;
 }
@@ -149,10 +168,12 @@
 
 .index-right {
   padding-left: 0;
+  padding-right: 0;
 }
 
 .index-center {
   padding-right: 0;
+  padding-left: 0;
 }
 
 .index-tweet-content-component {

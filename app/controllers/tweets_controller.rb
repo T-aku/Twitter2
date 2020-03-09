@@ -10,6 +10,7 @@ class TweetsController < ApplicationController
   
   def create
     @tweet = Tweet.new(tweet_params)
+    @tweet.user_id = session[:id]
     if @tweet.save
       redirect_to tweets_path
     else

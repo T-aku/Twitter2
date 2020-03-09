@@ -1,0 +1,18 @@
+<div class="row rowver2">
+  <div class="col-7 index-center">
+    <div class="profile">
+      <%= @user.username %>
+    </div>
+    <div class="inline">
+    </div>
+    <% @tweets.each do |tweet| %>
+      <div class="tweet-element">
+        <%= tweet.content %>
+      </div>
+    <% end %>
+  </div>
+  <div class="col-5 index-right">
+    <div class="right-sidebar">
+    </div>
+  </div>
+</div>
