@@ -1,15 +1,46 @@
 <div class="row rowver2">
   <div class="col-7 index-center">
-    <div class="profile">
-      <%= @user.username %>
-    </div>
+    <div class="tweet-element">
+      <% if !@user.image.blank? %>
+        <%= image_tag @user.image.url, class: "profilepic" %>
+      <% else %>
+        <%= image_tag "people.png", class: "profilepic" %>
+      <% end %>
+        <div class="tweet-element-right">
+          <div class="tweet-username">
+            <%= @user.username %>
+          </div>
+          <div class="tweet-series" align="right">
+            
+          </div>
+        </div>
+        <div class="floatend"></div>
+        <% if current_user == @user %>
+          <%= link_to "Edit Profile", edit_user_path(@user), class: "editbutton" %>
+          <div class="floatend"></div>
+        <% end %>
+      </div>
     <div class="inline">
     </div>
     <% @tweets.each do |tweet| %>
-      <div class="tweet-element">
-        <%= tweet.content %>
+    <div class="tweet-element">
+      <% if !tweet.user.image.blank? %>
+        <%= image_tag tweet.user.image.url, class: "profilepic" %>
+      <% else %>
+        <%= image_tag "people.png", class: "profilepic" %>
+      <% end %>
+        <div class="tweet-element-right">
+          <div class="tweet-username">
+            <%= tweet.user.username %>
+          </div>
+          <div class="tweet-series">
+            <%= tweet.content %>
+          </div>
+        </div>
+        <div class="floatend"></div>
       </div>
     <% end %>
+    
   </div>
   <div class="col-5 index-right">
     <div class="right-sidebar">

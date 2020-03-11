@@ -5,7 +5,7 @@
         Home
       </div>
       <div class="index-tweet-content">
-        <%= form_with scope: :tweet, url: tweets_path  do |f| %>
+        <%= form_with scope: :tweet, url: tweets_path do |f| %>
           <ul class="index-tweet-form">
             <li>
               <i class="fa fa-twitter twitter" aria-hidden="true"></i>
@@ -22,10 +22,14 @@
     </div>
     <% @tweets.each do |tweet| %>
       <div class="tweet-element">
-        <%= image_tag 'nobita7.png', class: "profilepic" %>
+      <% if !tweet.user.image.blank? %>
+        <%= image_tag tweet.user.image.url, class: "profilepic" %>
+      <% else %>
+        <%= image_tag "people.png" %>
+      <% end %>
         <div class="tweet-element-right">
           <div class="tweet-username">
-            <%= tweet.user.username %>
+            <%= link_to tweet.user.username, user_path(tweet.user), class: 'text-dark' %>
           </div>
           <div class="tweet-series">
             <%= tweet.content %>

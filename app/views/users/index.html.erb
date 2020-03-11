@@ -1,8 +1,22 @@
 <div class="row rowver2">
   <div class="col-7 index-center">
+    
     <% @users.each do |user| %>
-      <div class="tweet-element">
-        <%= user.username %>
+    <div class="tweet-element">
+      <% if !user.image.blank? %>
+        <%= image_tag user.image.url, class: "profilepic" %>
+      <% else %>
+        <%= image_tag "people.png", class: "profilepic" %>
+      <% end %>
+        <div class="tweet-element-right">
+          <div class="tweet-username">
+            <%= link_to user.username, user_path(user), class: 'text-dark' %>
+          </div>
+          <div class="tweet-series" align="right">
+            
+          </div>
+        </div>
+        <div class="floatend"></div>
         <% if current_user == user %>
         <% else %>
           <% if !current_user.friends.include?(user) %>
@@ -11,8 +25,10 @@
             <%= link_to "Unfollow", friendship_path(user), method: :delete, class: "unfollowtab" %>
           <% end %>
         <% end %>
+        <div class="floatend"></div>
       </div>
     <% end %>
+    
   </div>
   <div class="col-5 index-right">
     <div class="right-sidebar">
