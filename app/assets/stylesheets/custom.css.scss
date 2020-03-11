@@ -211,11 +211,56 @@
 }
 
 .tweet-element {
-  border-bottom:thin solid #EAE8E8;
+  border-bottom: thin solid #EAE8E8;
   padding: 20px 20px;
 }
 
 .inline {
   padding-top: 7px;
   background-color: #EAE8E8;
+}
+
+.followtab {
+  background-color: #fff;
+  border: thin solid #00acee;
+  color: #00acee;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 20px;
+  float: right;
+}
+
+.unfollowtab {
+  background-color: #00acee;
+  border: thin solid #00acee;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 20px;
+  float: right;
+}
+
+.profilepic {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  float: left;
+}
+
+.tweet-element-right {
+  float: left;
+  width: calc(100% - 60px);
+  margin-left: 10px;
+}
+
+.tweet-username {
+  font-weight: bold;
+}
+
+.tweet-series {
+  display: inline-block;
+}
+
+.floatend {
+  clear: both;
 }

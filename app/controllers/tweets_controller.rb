@@ -1,7 +1,7 @@
 class TweetsController < ApplicationController
   
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.where(user_id: current_user.friends.ids).or(Tweet.where(user_id: current_user.id))
   end
   
   def new

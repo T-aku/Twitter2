@@ -19,6 +19,9 @@ class UsersController < ApplicationController
     @tweets = @user.tweets
   end
   
+  def index
+    @users = User.all
+  end
   
   private
   

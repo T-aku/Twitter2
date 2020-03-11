@@ -1,0 +1,21 @@
+<div class="row rowver2">
+  <div class="col-7 index-center">
+    <% @users.each do |user| %>
+      <div class="tweet-element">
+        <%= user.username %>
+        <% if current_user == user %>
+        <% else %>
+          <% if !current_user.friends.include?(user) %>
+            <%= link_to "Follow", friendships_path(user), method: :post, class: "followtab" %>
+          <% else %>
+            <%= link_to "Unfollow", friendship_path(user), method: :delete, class: "unfollowtab" %>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <div class="col-5 index-right">
+    <div class="right-sidebar">
+    </div>
+  </div>
+</div>

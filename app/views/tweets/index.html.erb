@@ -22,7 +22,16 @@
     </div>
     <% @tweets.each do |tweet| %>
       <div class="tweet-element">
-        <%= tweet.content %>
+        <%= image_tag 'nobita7.png', class: "profilepic" %>
+        <div class="tweet-element-right">
+          <div class="tweet-username">
+            <%= tweet.user.username %>
+          </div>
+          <div class="tweet-series">
+            <%= tweet.content %>
+          </div>
+        </div>
+        <div class="floatend"></div>
       </div>
     <% end %>
   </div>

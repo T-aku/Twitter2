@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_many :tweets
-  
+  has_many :friendships
+  has_many :friends, through: :friendships
   
   validates :username, presence: true,
                       length: { minimum: 3, maximum: 50 },
